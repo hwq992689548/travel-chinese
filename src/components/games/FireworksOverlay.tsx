@@ -67,8 +67,9 @@ export function FireworksOverlay({ active }: Props) {
     if (!active) return;
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const parent = canvas.parentElement;
-    if (!parent) return;
+    const parentEl = canvas.parentElement;
+    if (!parentEl) return;
+    const host = parentEl;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
@@ -80,8 +81,8 @@ export function FireworksOverlay({ active }: Props) {
     const bursts: Burst[] = [];
 
     function resize() {
-      const w = parent.clientWidth;
-      const h = parent.clientHeight;
+      const w = host.clientWidth;
+      const h = host.clientHeight;
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
       surface.width = Math.floor(w * dpr);
       surface.height = Math.floor(h * dpr);
@@ -101,7 +102,7 @@ export function FireworksOverlay({ active }: Props) {
 
       if (spawnAcc > 0.28 && bursts.length < 8) {
         spawnAcc = 0;
-        ({ w, h } = { w: parent.clientWidth, h: parent.clientHeight });
+        ({ w, h } = { w: host.clientWidth, h: host.clientHeight });
         bursts.push(makeBurst(w, h));
       }
 
