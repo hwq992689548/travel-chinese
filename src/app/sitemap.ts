@@ -13,6 +13,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+    {
+      url: `${site}/games`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    ...["slice", "time", "reaction", "memory", "numbers"].map((slug) => ({
+      url: `${site}/games/${slug}`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
+    })),
     ...SCENES.map((scene) => ({
       url: `${site}/learn/${scene.id}`,
       lastModified: now,

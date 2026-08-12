@@ -16,6 +16,9 @@ export function SiteHeader() {
           <Link className="hover:text-[var(--accent)]" href="/learn">
             Learn
           </Link>
+          <Link className="hover:text-[var(--accent)]" href="/games">
+            Games
+          </Link>
           <Link className="hover:text-[var(--accent)]" href="/progress">
             Progress
           </Link>
