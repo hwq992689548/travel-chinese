@@ -9,6 +9,12 @@ export const metadata: Metadata = {
 
 const GAMES = [
   {
+    href: "/games/slap",
+    title: "Slap Challenge",
+    blurb: "是男人就给她一巴掌 — charge, slap, combo. 10 seconds.",
+    emoji: "✋",
+  },
+  {
     href: "/games/bubbles",
     title: "Bubble Soft",
     blurb: "Pop slow floating bubbles. No timer, no fail.",
