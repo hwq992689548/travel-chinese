@@ -3,10 +3,29 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Mini Games",
-  description: "Tiny browser games — reaction, memory, and number speed.",
+  description:
+    "Tiny browser games — calm poppers, pours, stamps, and quick challenges.",
 };
 
 const GAMES = [
+  {
+    href: "/games/bubbles",
+    title: "Bubble Soft",
+    blurb: "Pop slow floating bubbles. No timer, no fail.",
+    emoji: "🫧",
+  },
+  {
+    href: "/games/peel",
+    title: "Stamp Peel",
+    blurb: "Drag up to peel travel stickers.",
+    emoji: "🏷️",
+  },
+  {
+    href: "/games/tea",
+    title: "Tea Pour",
+    blurb: "Pour into the green band for a perfect cup.",
+    emoji: "🫖",
+  },
   {
     href: "/games/slice",
     title: "Stamp Slash",
@@ -16,7 +35,7 @@ const GAMES = [
   {
     href: "/games/time",
     title: "Time Guess",
-    blurb: "Random 1–60s target. Start, then stop as close as you can.",
+    blurb: "Random target seconds. Start, then stop as close as you can.",
     emoji: "⏱️",
   },
   {
@@ -47,7 +66,8 @@ export default function GamesPage() {
           Mini games
         </h1>
         <p className="mt-2 max-w-2xl text-[var(--muted)]">
-          Three tiny browser games to try. No install, no account — just play.
+          Calm decompressors and quick challenges. No install, no account — just
+          play.
         </p>
       </div>
 
